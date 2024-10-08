@@ -1,5 +1,6 @@
-.syracuse-background{
-background-image: (https://swsmokle.github.io/ist263/images/syracuse);
+
+{
+background-image: https://swsmokle.github.io/ist263/images/syracuse(".syracuse-background");
 }
 
 
