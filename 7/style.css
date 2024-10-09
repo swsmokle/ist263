@@ -1,11 +1,15 @@
-
-body { 
+.otto-background {
     background-image: url('https://swsmokle.github.io/ist263/images/otto'); 
-    background-size: cover;
-    background-position: center;
+    background-repeat: repeat; 
+    height: 100vh; 
+    margin: 0;
 }
 
 .orange-paragraph {
-    background-color: #FFDDC1; 
-    border: 2px solid #ff8347;
+    background-color: #FFDDC1;
+    border: 2px solid #ff8347; 
+    padding: 10px;
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    margin: 20px; 
 }
