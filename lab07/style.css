@@ -14,6 +14,8 @@ h1, h2,  {
 
 nav {
     background-color: #B17457; 
+     padding: 10px;  
+   margin-bottom: 30px;   
 }
 
 nav a {
