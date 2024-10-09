@@ -1,7 +1,11 @@
-body { background-image: https://swsmokle.github.io/ist263/images/syracuse(".syracuse-background.jpg");}
 
+body { 
+    background-image: url('https://swsmokle.github.io/ist263/images/syracuse.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
 
 .orange-paragraph {
     background-color: #FFDDC1; 
     border: 2px solid #ff8347;
-  }
+}
