@@ -25,3 +25,16 @@ nav a {
 nav a:hover {
     background-color: #FFB0B0; 
 }
+
+footer {
+    overflow: auto;
+    padding: 10px;
+    border-top: 1px solid #ccc; 
+}
+
+.left {
+    float: left;  
+
+.right {
+    float: right;
+}
