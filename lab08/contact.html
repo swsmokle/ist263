@@ -8,6 +8,7 @@
     
 
             .row-container {
+                
                 background-color: #D6B7A7;
                 display: flex;
                 margin: 20px;
@@ -15,8 +16,16 @@
                 border-radius: 15px;
                 margin: 10px;
             }
+.left-box {
+    flex: 1;
+    display: flex;
+    align-items: center; /* Align content vertically */
+    justify-content: center; /* Center horizontally */
+}
 
-          
+.right-box {
+    flex: 2;
+}
             .part2 {
                 display: flex;
                 margin: 20px;
@@ -74,6 +83,7 @@
         <h1 class="special">Contact Page</h1>
         
         <div class="row-container">
+             <div class="left-box">
                 <h2>Address</h2>
                 <p>
                     Sabrina Smokler<br>
@@ -82,9 +92,13 @@
                 </p>
                </div>
           <div class="row-container">
+                <div class="left-box">
                 <p>
                     <a href="mailto:swsmokle@syr.edu">swsmokle@syr.edu</a>
                 </p>
+                </div>
+              </div>
+            <div class="right-box">
                 <p>
                     <a href="https://www.linkedin.com/in/sabrinasmokler/" target="_blank">
                         My LinkedIn Page
