@@ -26,3 +26,50 @@ nav a:hover {
     background-color: #FFB0B0; 
 }
 
+ddress-box, .links-box, .form-box, .map-box {
+    background-color: #D6B7A7;  /* Using the same color as nav for consistency */
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+select, input[type="submit"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #C5705D; 
+    margin-top: 5px;
+    background-color: #FAF7F0;  
+    color: #4A4947;  
+
+input[type="submit"] {
+    background-color: #C5705D;  
+    color: #FAF7F0; 
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+}
+
+input[type="submit"]:hover {
+    background-color: #FFB0B0;  
+}
+
+.map-box iframe {
+    border-radius: 5px;
+    width: 100%;
+}
+
+
+.address-box a, .links-box a, .form-box a, .map-box a {
+    color: #35261D;  /* Using your nav link color for better contrast */
+}
+
+.address-box a:hover, .links-box a:hover, .form-box a:hover, .map-box a:hover {
+    color: #C5705D;  
+}
