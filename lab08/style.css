@@ -16,4 +16,79 @@ nav a {
 nav a:hover {
     background-color: #FFB0B0; 
 }
+/* Flexbox layout */
+.row-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    gap: 20px;
+}
+
+/* Common box styles */
+.box {
+    background-color: #D6B7A7;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Specific box styles */
+.address-box {
+    min-width: 200px;
+}
+
+.links-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-box select,
+.form-box input[type="submit"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #C5705D;
+    margin-top: 5px;
+    width: fit-content;
+}
+
+.form-box input[type="submit"] {
+    background-color: #C5705D;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 8px 20px;
+}
+
+.form-box input[type="submit"]:hover {
+    background-color: #FFB0B0;
+}
+
+.map-box iframe {
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+a {
+    color: #C5705D;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
