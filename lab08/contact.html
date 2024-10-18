@@ -3,7 +3,80 @@
     <head>
         <meta charset="utf-8">
         <title>Contact</title>
-        <link rel="stylesheet" href="style.css">
+        <style>
+    
+
+            .row-container {
+                display: flex;
+                margin: 20px;
+                gap: 20px;
+            }
+
+            .box {
+                background-color: #D6B7A7;
+                padding: 20px;
+                border-radius: 15px;
+                margin: 10px;
+            }
+
+          
+            .part2 {
+                display: flex;
+                margin: 20px;
+                gap: 20px;
+            }
+
+            .article1 {
+                flex: 1;
+                order: 2;
+                background-color: #D6B7A7;
+                border-radius: 15px;
+                padding: 20px;
+            }
+
+            .article2 {
+                flex: 2;
+                order: 1;
+                background-color: #D6B7A7;
+                border-radius: 15px;
+                padding: 20px;
+            }
+
+       
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            select, input[type="submit"] {
+                padding: 8px;
+                border-radius: 5px;
+                border: 1px solid #C5705D;
+                margin-top: 5px;
+                width: fit-content;
+            }
+
+            input[type="submit"] {
+                background-color: #C5705D;
+                color: white;
+                border: none;
+                cursor: pointer;
+                padding: 8px 20px;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #FFB0B0;
+            }
+
+        
+            iframe {
+                width: 100%;
+                height: 450px;
+                border: 0;
+                border-radius: 10px;
+            }
+        </style>
     </head>
     <body>
         <nav>
@@ -15,7 +88,7 @@
         
         <!-- First row with address and links -->
         <div class="row-container">
-            <div class="box address-box">
+            <div class="box">
                 <h2>Address</h2>
                 <p>
                     Sabrina Smokler<br>
@@ -23,7 +96,7 @@
                     Maplewood, NJ 07040
                 </p>
             </div>
-            <div class="box links-box">
+            <div class="box">
                 <p>
                     <a href="mailto:swsmokle@syr.edu">swsmokle@syr.edu</a>
                 </p>
@@ -36,9 +109,14 @@
             </div>
         </div>
 
-        <!-- Second row with form and map -->
-        <div class="row-container">
-            <div class="box form-box">
+        <!-- Second row with map on left and form on right -->
+        <div class="part2">
+            <div class="article2">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6047.256990739285!2d-74.2879705496095!3d40.72619409785177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ac48d0213ce1%3A0xa4ef31bc9dd02341!2s58%20Pierson%20Rd%2C%20Maplewood%2C%20NJ%2007040!5e0!3m2!1sen!2sus!4v1726177739630!5m2!1sen!2sus">
+                </iframe>
+            </div>
+            <div class="article1">
                 <p>Choose What You Want to Know:</p>
                 <form action="https://formspree.io/f/xqazvknb" method="POST">
                     <label for="info">Select Info:</label>
@@ -50,17 +128,6 @@
                     </select>
                     <input type="submit">
                 </form>
-            </div>
-            <div class="box map-box">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6047.256990739285!2d-74.2879705496095!3d40.72619409785177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ac48d0213ce1%3A0xa4ef31bc9dd02341!2s58%20Pierson%20Rd%2C%20Maplewood%2C%20NJ%2007040!5e0!3m2!1sen!2sus!4v1726177739630!5m2!1sen!2sus"
-                    width="100%"
-                    height="450"
-                    style="border:0;"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
             </div>
         </div>
     </body>
