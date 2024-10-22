@@ -53,7 +53,11 @@
 
          p {
             margin-bottom: 80px;
-           text-align: left;
+           text-align: center;
+        }
+        .content-column {
+            flex: 3; /* Updated to include both intro and skills */
+            padding-right: 20px;
         }
 
     </style>
@@ -69,9 +73,11 @@
     <h1 class="special">Sabrina's Skills</h1> 
 </div>
 
+<div class="flexbox-container">
+    <div class="content-column">
     <p>I have been learning different coding languages since my junior year of high school. Each coding language offers a unique set of functions which I am able to apply to various projects.</p>
 
-<div class="flexbox-container">
+
     <div class="skills-column">
         <div class="skills-row">
             <div class="skill">
