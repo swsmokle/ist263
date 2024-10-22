@@ -29,13 +29,24 @@
         .skill {
             text-align: center; 
         }
-        aside {
+       .flexbox-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+         .skills-column {
+            flex: 3;
+            padding-right: 20px;
+        }
+        /* Sidebar (aside) column */
+        .aside-column {
+            flex: 1;
             background-color: #D6B7A7; 
             color: #35261D; 
-            border-radius: 15px; 
+            border-radius: 15px;
             padding: 20px;
-            margin-top: 30px;
-            width: 300px;
+            margin-left: 20px;
+        
         }
     </style>
 </head>
@@ -51,8 +62,9 @@
  </div>
     <p>I have been learning coding languages since my junior year of high school. I have enjoyed learning the process of each lanugague and how I can apply them in various projects. </p>
 
-<div class="skills-row">
-    <div class="skill">
+<div class="flexbox-container">
+    <div class="skills-column">
+        <div class="skills-row">
         <img src="code-solid.svg" alt="HTML" width="80" height="80">
         <h2>HTML</h2>
     </div>
@@ -73,7 +85,9 @@
         <h2>Photoshop</h2>
     </div>
 </div>
-    <aside>
+</div>
+    
+ <div class="aside-column">
     <h2>Other Skills</h2>
     <ul>
         <li>Python </li>
@@ -81,7 +95,7 @@
         <li>Swift </li>
         <li>C++ </li>
     </ul>
-</aside>
+ </div>
     
 </body>
 </html>
