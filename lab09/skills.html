@@ -55,6 +55,12 @@
             margin-bottom: 80px;
            text-align: center;
         }
+
+        .intro-container {
+            flex: 3; /* Match the skills column width */
+            padding: 20px; /* Add some padding */
+            box-sizing: border-box; /* Include padding in width */
+        }
     </style>
 </head>
 <body>
@@ -68,9 +74,10 @@
     <h1 class="special">Sabrina's Skills</h1> 
 </div>
 
-
-<p>I have been learning different coding languages since my junior year of high school. Each coding language offers a unique set of functions which I am able to apply to various projects. </p>
-
+<div class="flexbox-container">
+    <div class="intro-container">
+        <p>I have been learning different coding languages since my junior year of high school. Each coding language offers a unique set of functions which I am able to apply to various projects.</p>
+    </div>
 
 <div class="flexbox-container">
     <div class="skills-column">
