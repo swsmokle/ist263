@@ -7,7 +7,7 @@
     <style>
         table, th, td {
             border: 1px solid black;
-      }
+        }
         tr:nth-child(even) {
             background-color: #D6B7A7;
         }
@@ -18,35 +18,36 @@
             display: flex;
             justify-content: center;
         }
-    
-        .skills-row {
-            display: flex;
-            justify-content: space-around; 
-            align-items: center; 
-            padding: 20px;
-        }
-    
-        .skill {
-            text-align: center; 
-        }
-       .flexbox-container {
+
+        .flexbox-container {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
         }
-         .skills-column {
+
+        .skills-column {
             flex: 3;
             padding-right: 20px;
         }
-        /* Sidebar (aside) column */
+
         .aside-column {
             flex: 1;
-            background-color: #D6B7A7; 
+            background-color: #D6B7A7;
             color: #35261D; 
-            border-radius: 15px;
+            border-radius: 15px; 
             padding: 20px;
             margin-left: 20px;
-        
+        }
+ 
+        .skills-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .skill {
+            text-align: center;
         }
     </style>
 </head>
@@ -58,44 +59,48 @@
  </nav>
 
 <div class="center-heading">
-    <h1 class="special">Skills lab06</h1> 
- </div>
-    <p>I have been learning coding languages since my junior year of high school. I have enjoyed learning the process of each lanugague and how I can apply them in various projects. </p>
+    <h1 class="special">Technical Skills</h1> 
+</div>
+
 
 <div class="flexbox-container">
+
     <div class="skills-column">
         <div class="skills-row">
-        <img src="code-solid.svg" alt="HTML" width="80" height="80">
-        <h2>HTML</h2>
+            <div class="skill">
+                <img src="code-solid.svg" alt="HTML" width="80" height="80">
+                <h2>HTML</h2>
+            </div>
+            <div class="skill">
+                <img src="css3-alt-brands-solid.svg" alt="CSS" width="80" height="80">
+                <h2>CSS</h2>
+            </div>
+            <div class="skill">
+                <img src="cloud-solid.svg" alt="AWS" width="80" height="80">
+                <h2>AWS</h2>
+            </div>
+            <div class="skill">
+                <img src="uncharted-brands-solid.svg" alt="CAD" width="80" height="80">
+                <h2>CAD</h2>
+            </div>
+            <div class="skill">
+                <img src="photo-film-solid.svg" alt="Photoshop" width="80" height="80">
+                <h2>Photoshop</h2>
+            </div>
+        </div>
     </div>
-    <div class="skill">
-        <img src="css3-alt-brands-solid.svg" alt="CSS" width="80" height="80">
-        <h2>CSS</h2>
-    </div>
-    <div class="skill">
-        <img src="cloud-solid.svg" alt="AWS" width="80" height="80">
-        <h2>AWS</h2>
-    </div>
-    <div class="skill">
-        <img src="uncharted-brands-solid.svg" alt="CAD" width="80" height="80">
-        <h2>CAD</h2>
-    </div>
-    <div class="skill">
-        <img src="photo-film-solid.svg" alt="Photoshop" width="80" height="80">
-        <h2>Photoshop</h2>
+
+
+    <div class="aside-column">
+        <h2>Other Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>SQL </li>
+            <li>Swift</li>
+            <li>C++</li>
+        </ul>
     </div>
 </div>
-</div>
-    
- <div class="aside-column">
-    <h2>Other Skills</h2>
-    <ul>
-        <li>Python </li>
-        <li>SQL </li>
-        <li>Swift </li>
-        <li>C++ </li>
-    </ul>
- </div>
-    
+
 </body>
 </html>
