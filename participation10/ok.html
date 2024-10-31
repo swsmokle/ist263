@@ -5,23 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Text</title>
   <style>
+    /* Default style for larger viewports */
     #message {
       font-size: 2em;
     }
+
+    /* Media query for viewports 800px or smaller */
     @media (max-width: 800px) {
       #message::before {
         content: "I’m small.";
       }
-      #message {
-        display: none;
-      }
     }
+
+    /* Media query for viewports larger than 800px */
     @media (min-width: 801px) {
       #message::before {
         content: "I’m large.";
-      }
-      #message {
-        display: none;
       }
     }
   </style>
