@@ -1,1 +1,32 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Text</title>
+  <style>
+    #message {
+      font-size: 2em;
+    }
+    @media (max-width: 800px) {
+      #message::before {
+        content: "I’m small.";
+      }
+      #message {
+        display: none;
+      }
+    }
+    @media (min-width: 801px) {
+      #message::before {
+        content: "I’m large.";
+      }
+      #message {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p id="message"></p>
+</body>
+</html>
