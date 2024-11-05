@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 11</title>
     <link rel="stylesheet" href="https://laferger.github.io/ist263/images/animate.css">
+    <style>
+        .container {
+            display: flex;
+        }
+        #first {order: 1;}
+        #second {order: 2;}
+        #third {order: 3;}
+    </style>
     <script>
         function WinnerMessage () {
             document.getElementById("messages").innerHTML = 'You Won!' ;
@@ -13,6 +21,8 @@
         function TryAgain () {
             document.getElementById("messages").innerHTML = 'Wrong Shell - Try Again ' ;
         }
+        function ShuffleShells () {
+            document.getElementById("first").style.order = Math.floor ((Math.random() * 3) + 2);
     </script>
 </head>
 <body>
@@ -23,5 +33,6 @@
     <img src="https://laferger.github.io/ist263/images/walnut.png"  id = "third" alt="third walnut" onclick= "TryAgain();">
 </div>
     <div id ="messages"></div>
+<body onload="ShuffleShells();">
 </body>
 </html>
