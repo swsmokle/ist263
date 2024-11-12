@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Clothing Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #facee1;
+            color: #1f1f27;
+        }
+        header {
+            background-color: #f074a6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #f48b76;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        .cta-btn {
+            background-color: #f05a43;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            display: inline-block;
+        }
+        .quiz {
+            background-color: #d5ba61;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .quiz h2 {
+            text-align: center;
+        }
+        .quiz input, .quiz select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #1f1f27;
+        }
+        footer {
+            background-color: #f074a6;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fashion that Fits You</h1>
+        <p>Accessible, Stylish, Personalized Clothing for All</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Shop</a>
+        <a href="#">How It Works</a>
+        <a href="#">FAQ</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Welcome to Our Adaptive Clothing Platform</h2>
+        <p>Our platform helps you discover stylish, functional clothing tailored to your needs and preferences.</p>
+        <a href="#quiz" class="cta-btn">Start Your Personalized Shopping Journey</a>
+    </section>
+
+    <section id="quiz">
+        <h2>Personalized Clothing Quiz</h2>
+        <div class="quiz">
+            <h3>Step 1: Tell Us About Your Needs</h3>
+            <form action="#">
+                <label for="mobility">Select your mobility needs:</label>
+                <select id="mobility" name="mobility">
+                    <option value="wheelchair">Wheelchair User</option>
+                    <option value="limited-mobility">Limited Mobility</option>
+                    <option value="sensory-issues">Sensory Issues</option>
+                    <option value="other">Other</option>
+                </select>
+                <label for="style">Preferred clothing style:</label>
+                <select id="style" name="style">
+                    <option value="casual">Casual</option>
+                    <option value="formal">Formal</option>
+                    <option value="sporty">Sporty</option>
+                    <option value="trendy">Trendy</option>
+                </select>
+                <label for="comfort">Comfort preferences:</label>
+                <select id="comfort" name="comfort">
+                    <option value="soft-fabric">Soft Fabrics</option>
+                    <option value="easy-closures">Easy Closures</option>
+                    <option value="elastic-waist">Elastic Waist</option>
+                </select>
+                <a href="#" class="cta-btn">Get My Personalized Recommendations</a>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Adaptive Clothing Platform. All rights reserved.</p>
+    </footer>
+</body>
+</html>
