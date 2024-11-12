@@ -22,7 +22,19 @@
          {width: 100px;}
      </style>
      <script>
+ function showPlanet(planet) {
+            const allImages = document.querySelectorAll('#bigimages img');
+            const allInfos = document.querySelectorAll('#planetinfo div');
 
+            allImages.forEach(img => img.style.display = 'none');
+            allInfos.forEach(info => info.style.display = 'none');
+            
+            const planetImage = document.getElementById(planet);
+            const planetInfo = document.getElementById(planet + 'info');
+
+            planetImage.style.display = 'block';
+            planetInfo.style.display = 'block';
+        }
      </script>
  </head>
  <body>
