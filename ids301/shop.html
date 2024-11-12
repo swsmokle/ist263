@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Personalized Clothing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8e3d2; /* Soft beige background */
+            color: #684036; /* Dark brown for body text */
+        }
+        header {
+            background-color: #e74c42; /* Bold red for header */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        nav {
+            background-color: #5374b4; /* Calm blue for the navigation */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        .cta-btn {
+            background-color: #5374b4; /* Blue button */
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .cta-btn:hover {
+            background-color: #45679d; /* Slightly darker blue on hover */
+        }
+        .quiz-result {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .quiz-result h3 {
+            color: #e74c42; /* Red for result title */
+            text-align: center;
+        }
+        footer {
+            background-color: #e74c42; /* Bold red footer */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Personalized Clothing Store</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="shop.html">Shop</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Quiz Section -->
+    <section id="quiz">
+        <h2>Personalized Clothing Quiz</h2>
+        <form id="quiz-form">
+            <label for="mobility">Select your mobility needs:</label>
+            <select id="mobility" name="mobility">
+                <option value="sensory-issues">Sensory Issues</option>
+                <option value="limited-mobility">Limited Mobility</option>
+                <option value="wheelchair">Wheelchair User</option>
+                <option value="other">Other</option>
+            </select>
+            <br>
+
+            <label for="style">Preferred clothing style:</label>
+            <select id="style" name="style">
+                <option value="casual">Casual</option>
+                <option value="formal">Formal</option>
+                <option value="sporty">Sporty</option>
+                <option value="trendy">Trendy</option>
+            </select>
+            <br>
+
+            <label for="comfort">Comfort preferences:</label>
+            <select id="comfort" name="comfort">
+                <option value="soft-fabrics">Soft Fabrics</option>
+                <option value="easy-closures">Easy Closures</option>
+                <option value="elastic-waist">Elastic Waist</option>
+            </select>
+            <br>
+
+            <button type="button" class="cta-btn" onclick="displayResults()">Get My Recommendations</button>
+        </form>
+    </section>
+
+    <!-- Display Results Based on Quiz Selections -->
+    <section id="results-section" style="display: none;">
+        <h2>Your Personalized Clothing Preferences</h2>
+        <div class="quiz-result">
+            <h3>Your Selections:</h3>
+            <p><strong>Mobility Needs:</strong> <span id="mobility-result"></span></p>
+            <p><strong>Preferred Clothing Style:</strong> <span id="style-result"></span></p>
+            <p><strong>Comfort Preferences:</strong> <span id="comfort-result"></span></p>
+        </div>
+    </section>
+
+    <!-- Shop Section with Clothing Items -->
+    <section id="shop-section">
+        <h2>Recommended Clothing for You</h2>
+        <div id="recommended-items" style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <!-- Dynamic items will be inserted here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Adaptive Clothing Platform. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to display the quiz results and update the shop section
+        function displayResults() {
+            const mobility = document.getElementById("mobility").value;
+            const style = document.getElementById("style").value;
+            const comfort = document.getElementById("comfort").value;
+
+            // Display the quiz results
+            document.getElementById("mobility-result").textContent = mobility.replace(/-/g, " ").toUpperCase();
+            document.getElementById("style-result").textContent = style.charAt(0).toUpperCase() + style.slice(1);
+            document.getElementById("comfort-result").textContent = comfort.replace(/-/g, " ").toUpperCase();
+
+            // Show the results section
+            document.getElementById("results-section").style.display = "block";
+
+            // Update the shop section with recommended items
+            const recommendedItems = getRecommendedItems(mobility, style, comfort);
+            const recommendedContainer = document.getElementById("recommended-items");
+            recommendedContainer.innerHTML = ""; // Clear previous recommendations
+
+            recommendedItems.forEach(item => {
+                const itemDiv = document.createElement("div");
+                itemDiv.style.textAlign = "center";
+                itemDiv.innerHTML = `
+                    <img src="${item.imgSrc}" alt="${item.name}" style="width: 150px; height: auto;">
+                    <a href="${item.link}" target="_blank" style="display: block; margin-top: 5px;">${item.name}</a>
+                `;
+                recommendedContainer.appendChild(itemDiv);
+            });
+        }
+
+        // Function to get recommended items based on quiz results
+        function getRecommendedItems(mobility, style, comfort) {
+            let items = [];
+
+            if (mobility === "sensory-issues" && style === "casual" && comfort === "soft-fabrics") {
+                items = [
+                    { name: "Soft Cotton T-shirt", imgSrc: "soft-cotton-tshirt.jpg", link: "https://www.examplestore.com/soft-cotton-tshirt" },
+                    { name: "Comfort Stretch Pants", imgSrc: "comfort-pants.jpg", link: "https://www.examplestore.com/comfort-pants" },
+                    { name: "Sensory-Friendly Socks", imgSrc: "sensory-friendly-socks.jpg", link: "https://www.examplestore.com/sensory-friendly-socks" },
+                    { name: "Soft Fabric Jacket", imgSrc: "soft-fabric-jacket.jpg", link: "https://www.examplestore.com/soft-fabric-jacket" },
+                ];
+            }
+            // Add more conditions for other quiz results if needed
+            return items;
+        }
+    </script>
+
+</body>
+</html>
