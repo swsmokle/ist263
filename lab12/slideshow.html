@@ -90,6 +90,15 @@
             document.getElementById(planetName).style.display = 'block';
             document.getElementById(planetName + 'info').style.display = 'block';
         }
+
+        function PlanetsOff() {
+    // Hide all planets and their info
+    const planets = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
+    planets.forEach(planet => {
+        document.getElementById(planet).style.display = 'none';  // Hide the planet image
+        document.getElementById(planet + 'info').style.display = 'none';  // Hide the planet info
+    });
+}
     </script>
 </head>
 <body>
