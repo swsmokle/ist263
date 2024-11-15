@@ -63,14 +63,14 @@
             opacity: 1;
             transform: scale(1.1);
         }
-        /* Hide all planet images and info except Mercury by default */
+        
         #venus, #earth, #mars, #jupiter, #saturn, #uranus, #neptune {
             display: none;
         }
         #venusinfo, #earthinfo, #marsinfo, #jupiterinfo, #saturninfo, #uranusinfo, #neptuneinfo {
             display: none;
         }
-        /* Clear float */
+
         #slideshow-container::after {
             content: "";
             display: table;
@@ -78,22 +78,20 @@
         }
     </style>
     <script>
-          function showPlanet(planetName) {
-            // Hide all planets
-            const planets = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
-            planets.forEach(planet => {
-                document.getElementById(planet).style.display = 'none';
-                document.getElementById(planet + 'info').style.display = 'none';
-            });
+         function showPlanet(planetName) {
+
+            PlanetsOff(); 
+            document.getElementById(planetName).style.display = 'block';
+            document.getElementById(planetName + 'info').style.display = 'block';
+        }
             
-            // Show selected planet
             document.getElementById(planetName).style.display = 'block';
             document.getElementById(planetName + 'info').style.display = 'block';
         }
 
         function PlanetsOff() {
-    // Hide all planets and their info
-    const planets = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
+
+        const planets = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
     planets.forEach(planet => {
         document.getElementById(planet).style.display = 'none';  // Hide the planet image
         document.getElementById(planet + 'info').style.display = 'none';  // Hide the planet info
