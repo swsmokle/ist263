@@ -79,11 +79,11 @@
     </style>
     <script>
          function showPlanet(planetName) {
-
-            PlanetsOff(); 
-            document.getElementById(planetName).style.display = 'block';
-            document.getElementById(planetName + 'info').style.display = 'block';
-        }
+            const planets = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
+            planets.forEach(planet => {
+                document.getElementById(planet).style.display = 'none';
+                document.getElementById(planet + 'info').style.display = 'none';
+            });
             
             document.getElementById(planetName).style.display = 'block';
             document.getElementById(planetName + 'info').style.display = 'block';
