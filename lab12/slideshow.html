@@ -85,7 +85,14 @@
                 document.getElementById(planet).style.display = 'none';
                 document.getElementById(planet + 'info').style.display = 'none';
             });
-            
+
+            function PlanetsOff() {
+    const planets = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'];
+    planets.forEach(planet => {
+        document.getElementById(planet).style.display = 'none'; 
+        document.getElementById(planet + 'info').style.display = 'none';  
+    });
+}
             // Show selected planet
             document.getElementById(planetName).style.display = 'block';
             document.getElementById(planetName + 'info').style.display = 'block';
@@ -140,14 +147,14 @@
         </div>
     </div>
     <div id="thumbnails">
-        <img src="https://laferger.github.io/ist263/images/mecury.jpg" alt="mercury" id="mercurythumb" onclick="showPlanet('mercury')">
-        <img src="https://laferger.github.io/ist263/images/venus.jpg" alt="venus" id="venusthumb" onclick="showPlanet('venus')">
-        <img src="https://laferger.github.io/ist263/images/earth.jpg" alt="earth" id="earththumb" onclick="showPlanet('earth')">
-        <img src="https://laferger.github.io/ist263/images/mars.jpg" alt="mars" id="marsthumb" onclick="showPlanet('mars')">
-        <img src="https://laferger.github.io/ist263/images/jupiter.jpg" alt="jupiter" id="jupiterthumb" onclick="showPlanet('jupiter')">
-        <img src="https://laferger.github.io/ist263/images/saturn.jpg" alt="saturn" id="saturnthumb" onclick="showPlanet('saturn')">
-        <img src="https://laferger.github.io/ist263/images/uranus.jpg" alt="uranus" id="uranusthumb" onclick="showPlanet('uranus')">
-        <img src="https://laferger.github.io/ist263/images/neptune.jpg" alt="neptune" id="neptunethumb" onclick="showPlanet('neptune')">
+<img src="https://laferger.github.io/ist263/images/mecury.jpg" alt="mercury" id="mercurythumb" onclick="PlanetsOff(); showPlanet('mercury')">
+<img src="https://laferger.github.io/ist263/images/venus.jpg" alt="venus" id="venusthumb" onclick="PlanetsOff(); showPlanet('venus')">
+<img src="https://laferger.github.io/ist263/images/earth.jpg" alt="earth" id="earththumb" onclick="PlanetsOff(); showPlanet('earth')">
+<img src="https://laferger.github.io/ist263/images/mars.jpg" alt="mars" id="marsthumb" onclick="PlanetsOff(); showPlanet('mars')">
+<img src="https://laferger.github.io/ist263/images/jupiter.jpg" alt="jupiter" id="jupiterthumb" onclick="PlanetsOff(); showPlanet('jupiter')">
+<img src="https://laferger.github.io/ist263/images/saturn.jpg" alt="saturn" id="saturnthumb" onclick="PlanetsOff(); showPlanet('saturn')">
+<img src="https://laferger.github.io/ist263/images/uranus.jpg" alt="uranus" id="uranusthumb" onclick="PlanetsOff(); showPlanet('uranus')">
+<img src="https://laferger.github.io/ist263/images/neptune.jpg" alt="neptune" id="neptunethumb" onclick="PlanetsOff(); showPlanet('neptune')">
     </div>
 </div>
 </body>
