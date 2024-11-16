@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STYLE PULSE | Interactive Fashion & Lifestyle</title>
     <style>
         body {
@@ -16,35 +17,54 @@
             padding: 1rem;
             position: sticky;
             top: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 1rem;
+            margin: 0.5rem 1rem;
             font-weight: 500;
         }
-        
+
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav a {
+                margin: 0.5rem 0;
+            }
+        }
+
         .hero {
             background-color: #f0f0f0;
             padding: 4rem 2rem;
             text-align: center;
         }
-        
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             padding: 2rem;
         }
-        
+
         .feature-card {
             background: white;
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         .style-quiz {
             background: #ff4d6d;
             color: white;
@@ -52,24 +72,25 @@
             text-align: center;
             margin: 2rem 0;
         }
-        
+
         .community-section {
             background: #4a90e2;
             color: white;
             padding: 2rem;
+            text-align: center;
         }
-        
+
         .magazine-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
             padding: 2rem;
         }
-        
+
         .magazine-card {
             text-align: center;
         }
-        
+
         .magazine-card img {
             width: 100%;
             max-width: 200px;
@@ -80,12 +101,12 @@
 </head>
 <body>
     <nav>
-        <a href="stylepulse.html">HOME</a> 
-        <a href="#style-quiz">STYLE QUIZ</a> <! --Work on -->
-        <a href="#trending">TRENDING</a> <! --Work on -->
-        <a href="community.html">COMMUNITY</a> 
-        <a href="beauty.html">BEAUTY LAB</a> 
-        <a href="#shop">SHOP</a> <! --Work on -->
+        <a href="stylepulse.html" aria-label="Go to Home">HOME</a> 
+        <a href="#style-quiz" aria-label="Take the Style Quiz">STYLE QUIZ</a>
+        <a href="#trending" aria-label="Explore Trending Styles">TRENDING</a>
+        <a href="community.html" aria-label="Join the Community">COMMUNITY</a> 
+        <a href="beauty.html" aria-label="Visit the Beauty Lab">BEAUTY LAB</a> 
+        <a href="#shop" aria-label="Visit the Shop">SHOP</a>
     </nav>
 
     <div class="hero">
@@ -113,6 +134,7 @@
             <p>Real-time fashion trends from street style to runway</p>
         </div>
     </div>
+
     <div class="trend-tracker">
         <h2>Trending Now</h2>
         <div class="features-grid">
@@ -131,86 +153,8 @@
         </div>
     </div>
 
-    <div class="seasonal-looks">
-        <h2>Seasonal Style Guide</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>Winter to Spring Transition</h3>
-                <p>Layering guides and must-have pieces</p>
-            </div>
-            <div class="feature-card">
-                <h3>Color Trends</h3>
-                <p>Season's hottest color combinations</p>
-            </div>
-            <div class="feature-card">
-                <h3>Accessory Focus</h3>
-                <p>Statement pieces to elevate your look</p>
-            </div>
-        </div>
-    </div>
-
-      <div class="beauty-tips">
-        <h2>Beauty & Self-Care</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>Skincare Routines</h3>
-                <p>Personalized recommendations based on your skin type</p>
-            </div>
-            <div class="feature-card">
-                <h3>Makeup Tutorials</h3>
-                <p>Try our AR makeup filter to test looks</p>
-            </div>
-            <div class="feature-card">
-                <h3>Wellness Corner</h3>
-                <p>Holistic beauty and self-care tips</p>
-            </div>
-        </div>
-    </div>
-
-  
-    <div class="influencer-spotlight">
-        <h2>Creator Spotlight</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <img src="street.jpg" alt="Influencer 1">
-                <h3>@StyleGuruNYC</h3>
-                <p>Street Style Expert</p>
-            </div>
-            <div class="feature-card">
-                <img src="/api/placeholder/100/100" alt="Influencer 2">
-                <h3>@EcoFashionista</h3>
-                <p>Sustainable Fashion</p>
-            </div>
-            <div class="feature-card">
-                <img src="/api/placeholder/100/100" alt="Influencer 3">
-                <h3>@BeautyGuru</h3>
-                <p>Beauty & Skincare</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="eco-fashion">
-        <h2>Sustainable Fashion Hub</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>Eco-Friendly Brands</h3>
-                <p>Discover sustainable fashion labels</p>
-            </div>
-            <div class="feature-card">
-                <h3>Thrift & Vintage</h3>
-                <p>Best second-hand finds in your area</p>
-            </div>
-            <div class="feature-card">
-                <h3>Upcycling Workshop</h3>
-                <p>Transform your old clothes into new styles</p>
-            </div>
-        </div>
-    </div>
-
-
-        
     <div class="community-section">
-    <h2><a href="community.html">Style Community</a></h2>
+        <h2><a href="community.html">Style Community</a></h2>
         <p>Join weekly style challenges • Share your looks • Get feedback from experts</p>
         <div class="community-feed">
             <h3>Today's Style Challenge: Sustainable Fashion</h3>
@@ -221,20 +165,21 @@
     <section class="magazine-grid">
         <h2>Featured Magazines & Inspiration</h2>
         <div class="magazine-card">
-            <img src="vogue.jpg" alt="Vogue Magazine">
+            <img src="vogue.jpg" alt="Vogue Magazine Cover">
             <h3>Vogue</h3>
             <p>Latest Issue</p>
         </div>
         <div class="magazine-card">
-            <img src="/api/placeholder/200/300" alt="Style Pulse Digital">
+            <img src="/api/placeholder/200/300" alt="Style Pulse Digital Cover">
             <h3>Style Pulse Digital</h3>
             <p>Our Weekly Edit</p>
         </div>
         <div class="magazine-card">
-            <img src="/api/placeholder/200/300" alt="Street Style Weekly">
+            <img src="/api/placeholder/200/300" alt="Street Style Weekly Cover">
             <h3>Street Style Weekly</h3>
             <p>Community Picks</p>
         </div>
     </section>
 </body>
 </html>
+
