@@ -40,17 +40,3 @@ nav a:hover {
     }
 }
 
-.skip-to-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #000;
-    color: #fff;
-    padding: 10px;
-    text-decoration: none;
-    z-index: 1000;
-}
-
-.skip-to-content:focus {
-    outline: 2px solid #fff;
-}
