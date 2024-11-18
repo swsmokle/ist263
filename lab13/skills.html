@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <Title> lab07 </Title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css">
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        tr:nth-child(even) {
+            background-color: #D6B7A7;
+        }
+        tr:nth-child(odd) {
+            background-color: #FAF7F0; 
+        }
+        .center-heading {
+            display: flex;
+            justify-content: center;
+        }
+
+        .flexbox-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .skills-column {
+            flex: 3;
+            padding-right: 20px;
+        }
+
+        .aside-column {
+            flex: 1;
+            background-color: #D6B7A7;
+            color: #35261D; 
+            border-radius: 15px; 
+            padding: 20px;
+            margin-right: 40px;
+            margin-left: 20px;
+        }
+ 
+        .skills-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .skill {
+            text-align: center;
+        }
+
+         p {
+            margin-bottom: 80px;
+            margin-left: 35px;
+           text-align: center;
+            max-width: 60%;
+        }
+    </style>
+</head>
+    
+<body>
+ <nav>
+     <a href="index.html">Home</a><span>|</span>
+    <a href="skills.html">Skills</a><span>|</span>
+    <a href="contact.html">Contact</a>
+ </nav>
+
+<div class="center-heading">
+    <h1 class="special">Sabrina's Skills</h1> 
+</div>
+   
+    <p>I have been learning different coding languages since my junior year of high school. Each coding language offers a unique set of functions which I am able to apply to various projects.</p>
+
+<div class="flexbox-container">
+    <div class="skills-column">
+        <div class="skills-row">
+            <div class="skill">
+                <img src="code-solid.svg" alt="HTML" width="80" height="80">
+                <h2>HTML</h2>
+            </div>
+            <div class="skill">
+                <img src="css3-alt-brands-solid.svg" alt="CSS" width="80" height="80">
+                <h2>CSS</h2>
+            </div>
+            <div class="skill">
+                <img src="cloud-solid.svg" alt="AWS" width="80" height="80">
+                <h2>AWS</h2>
+            </div>
+            <div class="skill">
+                <img src="uncharted-brands-solid.svg" alt="CAD" width="80" height="80">
+                <h2>CAD</h2>
+            </div>
+            <div class="skill">
+                <img src="photo-film-solid.svg" alt="Photoshop" width="80" height="80">
+                <h2>Photoshop</h2>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="aside-column">
+        <h2>Other Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>SQL </li>
+            <li>Swift</li>
+            <li>C++</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
