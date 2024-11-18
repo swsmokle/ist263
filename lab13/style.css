@@ -1,0 +1,41 @@
+body {
+    background-color: #FAF7F0; 
+    color: #4A4947;            
+}
+
+nav {
+    background-color: #D6B7A7; 
+    padding: 10px;  
+    margin-bottom: 30px;   
+}
+
+nav a {
+    color: #35261D;         
+}
+
+nav a:hover {
+    background-color: #FFB0B0; 
+}
+
+.responsive-img {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; 
+        align-items: flex-start;
+        text-align: left; 
+    }
+    
+    nav a {
+        display: block; 
+        width: 100%; 
+        padding: 10px 0;
+        text-align: left; 
+    }
+    
+    nav span {
+        display: none;
+    }
+}
