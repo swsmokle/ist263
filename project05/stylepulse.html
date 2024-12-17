@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STYLE PULSE | Interactive Fashion & Lifestyle</title>
     <style>
-            body {
+        body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #fafafa;
-             display: flex;
+            display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
@@ -49,74 +49,38 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .style-quiz {
-            background: #ff4d6d;
-            color: white;
-            padding: 2rem;
+        .carousel {
+            margin-top: 1rem;
             text-align: center;
-            margin: 2rem 0;
+            position: relative;
         }
 
-        .community-section {
-            background: #4a90e2;
+        .carousel img {
+            max-width: 100%;
+            max-height: 200px;
+            border-radius: 8px;
+            transition: opacity 0.5s ease-in-out;
+            display: none; /* Initially hide all images */
+        }
+
+        .carousel img.active {
+            display: block; /* Show the active image */
+        }
+
+        .next-outfit {
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: #ff4d6d;
             color: white;
-            padding: 2rem;
-        }
-
-        .magazine-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            padding: 2rem;
-        }
-
-        .magazine-card {
-            text-align: center;
-        }
-
-        .magazine-card img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            border-radius: 4px;
-        }
-
-        .site-footer {
-            background-color: #686f78;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            margin-top: auto;
-        }
-
-        .site-footer h2 {
-            margin-bottom: 1rem;
-        }
-
-        .site-footer p {
-            max-width: 800px;
-            margin: 0 auto 1.5rem;
-            line-height: 1.6;
-        }
-
-        .site-footer .community-feed {
-            margin-top: 1.5rem;
-        }
-
-        .site-footer hr {
             border: none;
-            border-top: 1px solid rgba(255,255,255,0.3);
-            margin: 1rem 0;
-        }
-
-        .site-footer .contact-info {
+            border-radius: 5px;
+            cursor: pointer;
             font-weight: bold;
-            margin-bottom: 1rem;
+            transition: background-color 0.3s;
         }
 
-        .site-footer .copyright {
-            font-size: 0.9rem;
-            opacity: 0.8;
+        .next-outfit:hover {
+            background-color: #e0435e;
         }
     </style>
 </head>
@@ -140,10 +104,17 @@
     </div>
 
     <div class="features-grid">
-        <div class="feature-card">
+        <div class="feature-card" id="virtual-closet">
             <h3>Virtual Closet</h3>
             <p>Upload your wardrobe and get AI-powered outfit suggestions</p>
+            <div class="carousel">
+                <img src="outfit1.jpg" alt="Outfit 1" class="active">
+                <img src="outfit2.jpg" alt="Outfit 2">
+                <img src="outfit3.jpg" alt="Outfit 3">
+            </div>
+            <button class="next-outfit">Next Outfit</button>
         </div>
+
         <div class="feature-card">
             <h3>Beauty Lab</h3>
             <p>Build your perfect skincare routine with expert recommendations</p>
@@ -154,49 +125,6 @@
         </div>
     </div>
 
-    <div class="trend-tracker">
-        <h2>Trending Now</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                   <h3><a href="https://www.pinterest.com/search/pins/?rs=ac&len=2&q=holiday%20outfits&eq=holiday&etslf=2371" style="text-decoration: none; color: inherit;">#HolidayAttire</a></h3>
-                <p>1.2M posts this week</p>
-            </div>
-            <div class="feature-card">
-                <h3><a href= "https://www.pinterest.com/search/pins/?rs=ac&len=2&q=sustainable%20fashion&eq=sustainable&etslf=3046#SustainableFashion" target="_blank" style="text-decoration: none; color: inherit;">#SustainableFashion</a></h3>
-                <p>890K posts this week</p>
-            </div>
-            <div class="feature-card">
-    <h3><a href="https://www.pinterest.com/search/pins/?q=vintage%20finds%20%2B%20clothing&rs=typed" target="_blank" style="text-decoration: none; color: inherit;">#VintageFinds</a></h3>
-    <p>750K posts this week</p>
-</div>
-        </div>
-    </div>
-
-<section class="magazine-grid">
-    <h2>Featured Magazines</h2>
-    <div class="magazine-card">
-        <a href="https://www.vogue.com/" target="_blank">
-            <img src="vogue.jpg" alt="Vogue Magazine Cover">
-            <h3>Vogue</h3>
-            <p>Latest Issue</p>
-        </a>
-    </div>
-    <div class="magazine-card">
-        <a href="https://www.cosmopolitan.com" target="_blank">
-            <img src="cosmopolitan.jpg" alt="Cosmopolitan Magazine Cover">
-            <h3>Cosmopolitan</h3>
-            <p>Latest Issue</p>
-        </a>
-    </div>
-    <div class="magazine-card">
-        <a href="https://www.newyorker.com" target="_blank">
-            <img src="TheNewYorker.jpg" alt="NewYorker Magazine Cover">
-            <h3>The New Yorker</h3>
-            <p>Latest Issue</p>
-        </a>
-    </div>
-</section>
-
     <footer class="site-footer community-section">
         <h2>About Style Pulse</h2>
         <p>Style Pulse is ran as a magazine hub to embrace your style and find recommendations from other people in your community!</p>
@@ -206,6 +134,32 @@
             <p class="copyright">&copy; 2024. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // JavaScript to handle carousel functionality
+        const virtualCloset = document.getElementById('virtual-closet');
+        const carousel = virtualCloset.querySelector('.carousel');
+        const images = carousel.querySelectorAll('img');
+        const nextButton = virtualCloset.querySelector('.next-outfit');
+
+        let currentIndex = 0;
+
+        // Function to show the next outfit
+        function showNextOutfit() {
+            // Hide the current image
+            images[currentIndex].classList.remove('active');
+
+            // Move to the next image (loop back to the start if necessary)
+            currentIndex = (currentIndex + 1) % images.length;
+
+            // Show the new image
+            images[currentIndex].classList.add('active');
+        }
+
+        // Add event listener to the "Next Outfit" button
+        nextButton.addEventListener('click', showNextOutfit);
+    </script>
 </body>
 </html>
+
 
