@@ -17,28 +17,15 @@
             padding: 1rem;
             position: sticky;
             top: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
         }
         
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0.5rem 1rem;
+            margin: 0 1rem;
             font-weight: 500;
         }
-
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-                text-align: center;
-            }
-            nav a {
-                margin: 0.5rem 0;
-            }
-        }
-
+        
         .hero {
             background-color: #f0f0f0;
             padding: 4rem 2rem;
@@ -59,12 +46,6 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        @media (max-width: 768px) {
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
         .style-quiz {
             background: #ff4d6d;
             color: white;
@@ -77,7 +58,6 @@
             background: #4a90e2;
             color: white;
             padding: 2rem;
-            text-align: center;
         }
 
         .magazine-grid {
@@ -101,10 +81,10 @@
 </head>
 <body>
     <nav>
-        <a href="stylepulse.html" aria-label="Go to Home">HOME</a> 
-        <a href="#style-quiz" aria-label="Take the Style Quiz">STYLE QUIZ</a>
-        <a href="community.html" aria-label="Join the Community">COMMUNITY</a> 
-        <a href="beauty.html" aria-label="Visit the Beauty Lab">BEAUTY LAB</a> 
+        <a href="stylepulse.html">HOME</a> 
+        <a href="#style-quiz">STYLE QUIZ</a>
+        <a href="community.html">COMMUNITY</a> 
+        <a href="beauty.html">BEAUTY LAB</a> 
     </nav>
 
     <div class="hero">
