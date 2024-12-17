@@ -65,7 +65,7 @@
 
         .magazine-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            grid-template-columns: repeat(3, 1fr); 
             gap: 1.5rem;
             padding: 2rem;
         }
@@ -75,10 +75,10 @@
         }
 
         .magazine-card img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
-            border-radius: 4px;
+         width: 100%;
+        height: 300px; /* Set a consistent height for the images */
+        object-fit: cover; /* Ensures the images are properly scaled to fill the space without distortion */
+        border-radius: 4px;
         }
 
         .site-footer {
