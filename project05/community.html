@@ -116,13 +116,21 @@
 
     <h1>Community Forum</h1>
 
-    <section class="message-section">
-        <h2>Submit Advice or Questions</h2>
-        <form>
-            <textarea rows="5" placeholder="Write your advice or question here..."></textarea>
-            <button type="button">Submit</button>
-        </form>
-    </section>
+<section class="message-section">
+    <h2>Submit Advice or Questions</h2>
+    <form action="https://formspree.io/f/xqazvknb" method="POST">
+        <label for="info">Select Info:</label>
+        <select id="info" name="info">
+            <option value="advice">Advice</option>
+            <option value="question">Question</option>
+            <option value="feedback">Feedback</option>
+        </select>
+        
+        <textarea name="message" rows="5" placeholder="Write your advice or question here..."></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
 
     <section class="past-submissions">
         <h3>Past Submissions</h3>
