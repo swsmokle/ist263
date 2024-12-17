@@ -63,7 +63,7 @@
             padding: 2rem;
         }
 
-    .magazine-grid {
+  .magazine-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 1.5rem;
@@ -79,6 +79,12 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* Centers content horizontally */
+    justify-content: space-between; /* Ensures equal space between items */
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 100%; /* Ensures the card takes full height */
 }
 
 .magazine-card a {
@@ -87,6 +93,8 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* Centers link contents */
+    justify-content: space-between; /* Ensures equal space between elements */
+    height: 100%; /* Ensures content takes full height */
 }
 
 .magazine-card img {
